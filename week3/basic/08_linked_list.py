@@ -40,15 +40,15 @@ class LinkedList:
         # TODO: 리스트가 비어있으면 head를 new_node로 설정
         if self.head is None:
             self.head = new_node
-            return
         
         # TODO: 마지막 노드 찾기
-        current = self.head
-        while current.next:
-            current = current.next
+        else:
+            current = self.head
+            while (current.next):
+                current = current.next
         
         # TODO: 마지막 노드의 next를 new_node로 설정
-        current.next = new_node
+            current.next = new_node
     
     def print_list(self):
         """리스트의 모든 값 출력"""
@@ -58,8 +58,8 @@ class LinkedList:
         current = self.head
         
         # TODO: 끝까지 순회하며 값 수집
-        while current:
-            values.append(current.data)
+        while current: #노드가 존재하는 동안 계속 반복
+            values.append(current.data) #현재 노드의 값을 리스트에 넣음
             current = current.next
         
         return values
